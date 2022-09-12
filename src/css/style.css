@@ -34,7 +34,7 @@
 
 .header .currency-select input.select-dropdown {
   margin: 0;
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
   border-bottom: none;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .header .currency-select .caret {
-  fill: #fff;
+  fill: rgba(255, 255, 255, 1);
 }
 
 .header .brand-logo {
@@ -96,7 +96,7 @@
   font-size: 25px;
   padding: 5px;
   background: #6a1b9a;
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .ticket-additional-info {
