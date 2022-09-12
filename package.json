@@ -1,14 +1,14 @@
 {
-  "name": "lesson-54-part-5-video",
+  "name": "avia-tickets",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack --mode=production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mikhail Kushkov",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -17,6 +17,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^3.1.0",
     "file-loader": "^4.1.0",
     "html-webpack-plugin": "^3.2.0",
