@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.mr-5 {
+  margin-right: 5px;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -30,6 +34,13 @@
 /* Header styles */
 .header .brand-logo {
   position: static;
+}
+
+@media only screen and (max-width: 992px) {
+  nav.header .brand-logo {
+    left: auto;
+    transform: none;
+  }
 }
 
 .header .currency-select input.select-dropdown {
