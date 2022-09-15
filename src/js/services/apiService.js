@@ -22,6 +22,7 @@ export class Api {
   async cities() {
     try {
       const response = await axios.get(`${this.url}/cities`);
+      console.log(response.data);
       return response.data;
     } catch (err) {
       console.log(err);
@@ -31,6 +32,7 @@ export class Api {
   async airlines() {
     try {
       const response = await axios.get(`${this.url}/airlines`);
+      console.log(response.data);
       return response.data;
     } catch (err) {
       console.log(err);

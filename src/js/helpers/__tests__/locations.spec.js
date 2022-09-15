@@ -4,8 +4,14 @@ import api, { Api } from '../../services/apiService';
 
 // mock: имитируем реальные данные
 const countries = [{ code: 'AD', name: 'Andorra' }];
+const cities = [{ country_code: 'UKR', name: 'Kharkiv', code: 'KH' }]
 
 describe('locations store tests', () => {
+
+  beforeEach(() => {
+    const cities = [{ country_code: 'UKR', name: 'Kharkiv', code: 'KH' }]
+  })
+
   it('Check if locationInstance is instance of location class', () => {
     expect(locationsInstance).toBeInstanceOf(Locations)
   })
@@ -28,6 +34,33 @@ describe('locations store tests', () => {
     }
     expect(res).toEqual(expectedData)
   })
+  // it('check cities', () => {
+  //   const res = locationsInstance.getCityNameByCode('KH');
+  //   expect(res).toBe('Kharkiv')
+  // })
+  // it('Check correct cities serialize', () => {
+  //   const res = locationsInstance.serializeCities(cities);
+  //   const expectedData = {
+  //     KH: {country_code: 'UKR', name: 'Kharkiv', code: 'KH', country_name: 'Ukraine', full_name: 'Kharkiv, Ukraine'}
+  //   }
+  //   expect(res).toEqual(expectedData)
+  // })
+
+  // it('Check countries serialize with incorrect data', () => {
+  //   const res = locationsInstance.serializeCountries(null)
+  //   const expectedData = {};
+
+  //   expect(res).toEqual(expectedData)
+  // })
+  
+  // it('Check cities serialize with incorrect data', () => {
+  //   const res = locationsInstance.serializeCities(cities);
+  //   const expectedData = {
+  //     KH: {country_code: 'UKR', name: 'Kharkiv', code: 'KH', country_name: 'Ukraine', full_name: 'Kharkiv, Ukraine'}
+  //   };
+
+  //   expect(res).toEqual(expectedData)
+  // })
   
 })
 
