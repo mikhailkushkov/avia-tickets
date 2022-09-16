@@ -64,9 +64,9 @@ export class Locations {
 
   serializeCountries(countries) {
     // если нет длины или это не массив
-    setTimeout(() => {
-      if (Array.isArray(countries) || !countries.length) return {};
-    }, 2000);
+    // setTimeout(() => {
+    //   if (Array.isArray(countries) || !countries.length) return {};
+    // }, 2000);
 
     return countries.reduce((acc, country) => {
       acc[country.code] = country;
