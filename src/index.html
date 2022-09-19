@@ -22,7 +22,7 @@
 
           <ul id="nav-mobile" class="right ml-auto">
             <li>
-              <div class="input-field currency-select">
+              <div class="input-field currency-select" data-tests="currencySelect">
                 <select id="currency">
                   <option value="EUR">€ Euro</option>
                   <option value="USD">$ US Dollar</option>
@@ -42,7 +42,7 @@
               <form name="locationControls" data-tests="mainForm">
                 <div class="card-content">
                   <span class="card-title">Choose your flight</span>
-                  <div class="input-field">
+                  <div class="input-field field-origin">
                     <input
                       type="text"
                       id="autocomplete-origin"
@@ -51,7 +51,7 @@
                     />
                     <label for="autocomplete-origin">Origin</label>
                   </div>
-                  <div class="input-field">
+                  <div class="input-field field-destination">
                     <input
                       type="text"
                       id="autocomplete-destination"
@@ -84,6 +84,7 @@
                     class="btn waves-effect waves-light purple darken-3 mr-5"
                     type="submit"
                     name="action"
+                    data-tests="submitBtn"
                   >
                     Search
                     <i class="material-icons right">send</i>
@@ -92,6 +93,7 @@
                     class="btn waves-effect waves-light pink darken-3 ml-auto"
                     type="reset"
                     name="action"
+                    data-tests="resetBtn"
                   >
                     Reset
                     <i class="material-icons right">cancel</i>
@@ -103,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="tickets-sections">
+    <div class="tickets-sections" data-tests="ticketsContainer">
       <div class="container">
         <div class="row">
           <!-- Dynamic content -->

@@ -23,4 +23,22 @@ describe('Form', () => {
     cy.get('@datePickerDepartInput').click()
     cy.get('@modalWindow').should('be.visible')
   })
+  it('After selecting a departing date, it should be displayed in the input field in the right format', () => {
+    cy.get('[data-tests=datepickerDepartWrap] .datepicker-container .is-today').as('today')
+    cy.get('[data-tests=datepickerDepartWrap] .datepicker-container .btn-flat').as('modalButtons')
+    cy.get('[data-tests=datePickerDepartInput]').as('datePickerDepartInput')
+
+    cy.get('@today').click()
+    cy.get('@today').should('have.class', 'is-selected')
+    cy.get('@modalButtons').contains('Ok').click()
+
+    cy.get('@datePickerDepartInput').then(($input) => {
+      const val = $input.val()
+      //Format: 2022-09
+      expect(val).to.match(/^\d{4}-\d{2}-\d{2}$/)
+    })
+  })
+  it('When selecting a currency from a header dropdown, it should be changed and be visible in a header', () => {
+    cy.selectTheCurrency()
+  })
 })

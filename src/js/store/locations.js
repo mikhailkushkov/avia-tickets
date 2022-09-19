@@ -82,7 +82,7 @@ export class Locations {
       acc[city.code] = {
         ...city,
         country_name,
-        full_name,
+        full_name
       };
       return acc;
     }, {});
